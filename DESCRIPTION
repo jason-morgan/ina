@@ -1,0 +1,19 @@
+Package: ina
+Title: Data Collection for the book Inferential Network Analysis
+Version: 0.0.0.9000
+Date: 2017-02-11
+Authors@R: as.person(c(
+    "Jason W. Morgan <jason.w.morgan@gmail.com> [aut, cre]", 
+    "Skyler J. Cranmer <cranmer.12@osu.edu> [aut]",
+    "Bruce A. Desmarais <bdesmarais@psu.edu> [aut]"
+  ))
+Description: This package contains the data used in the book, Inferential
+    Network Analysis, by Skyler J. Cranmer, Bruce A. Desmarais, and
+    Jason W. Morgan.
+Depends:
+    R (>= 3.0.1)
+License: GPL-3
+Encoding: UTF-8
+LazyData: true
+Maintainer: 'Jason W. Morgan' <jason.w.morgan@gmail.com>
+RoxygenNote: 5.0.1
