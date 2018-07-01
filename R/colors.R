@@ -1,16 +1,23 @@
 ##' Returns a vector of colors to be used in plotting.
 ##'
 ##' Returns a vector of colors (hexadecimal representation), which are sourced
-##' from the http://colorbrewer2.org website.
+##' from RColorBrewer.
 ##' @title Colors used in Inferential Network Analysis
-##' @param classes Number of classes between 1 and 6 in the color vector.
+##' @param n Number of classes between 1 and 6 in the color vector.
+##' @param paired logical, indicating whether to use the paired colors for
+##'     qualitative data from from RColorBrewer.
 ##' @return A vector of colors.
 ##' @author Jason W. Morgan \email{jason.w.morgan@@gmail.com}
 ##' @export
-Colors <- function(classes=3)
+Colors <- function(n=3, paired=TRUE)
 {
-    stopifnot(classes %in% 1:6)
+    stopifnot(n %in% 1:12)
 
-    base <- c("#a6cee3", "#1f78b4", "#b2df8a", "#33a02c", "#fb9a99", "#e31a1c")
-    base[1:classes]
+    if (isTRUE(paired)) {
+        col <- RColorBrewer::brewer.pal(n=n, name="Paired")
+    } else {
+        col <- RColorBrewer::brewer.pal(n=n, name="Greens")
+    }
+
+    col
 }

@@ -4,10 +4,13 @@
 \alias{Colors}
 \title{Colors used in Inferential Network Analysis}
 \usage{
-Colors(classes = 3)
+Colors(n = 3, paired = TRUE)
 }
 \arguments{
-\item{classes}{Number of classes between 1 and 6 in the color vector.}
+\item{n}{Number of classes between 1 and 6 in the color vector.}
+
+\item{paired}{logical, indicating whether to use the paired colors for
+qualitative data from from RColorBrewer.}
 }
 \value{
 A vector of colors.
@@ -17,7 +20,7 @@ Returns a vector of colors to be used in plotting.
 }
 \details{
 Returns a vector of colors (hexadecimal representation), which are sourced
-from the http://colorbrewer2.org website.
+from RColorBrewer.
 }
 \author{
 Jason W. Morgan \email{jason.w.morgan@gmail.com}
