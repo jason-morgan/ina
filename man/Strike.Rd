@@ -35,7 +35,7 @@ effectively communicated to all employees by the union negotiators.
 
 The outside consultant asked all employees to indicate the frequency in
 which they discussed the strike with each of their colleagues on a 5-point
-scale, ranging from 'almost never' (less then once per week) to 'very often'
+scale, ranging from `almost never' (less then once per week) to `very often'
 (several times per day). The consultant used three as a cut-off value. If at
 least one of two persons indicated that they discussed work with a frequency
 of three or more, a line between them was added to the informal
@@ -58,4 +58,3 @@ Michael, Judd H. (1997), "Labor dispute reconciliation in a forest
     products manufacturing facility", Forest Products Journal, 47, 41--45.
 }
 \keyword{datasets}
-
