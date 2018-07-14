@@ -49,3 +49,30 @@
 ##'     products manufacturing facility", Forest Products Journal, 47, 41--45.
 ##' @source \url{https://sites.google.com/site/ucinetsoftware/datasets/informalcommunicationwithinasawmillonstrike}
 NULL
+
+
+##' Advice network between managers in a high-tech manufacturing compnay
+##'
+##' This directed network contains the advice communication network between
+##' 21 managers in a high-tech manufacturing company (Krackhardt 1987).
+##'
+##' @format A directed statnet network object with 21 nodes:
+##' \describe{
+##'   \item{vertex.names}{vertex attribute, unique id number for each manager
+##'       in the network}
+##'   \item{Age}{vertex attribute, age of each manager}
+##'   \item{Department}{vertex attribute, integer indicating the manager's
+##'       department}
+##'   \item{Level}{vertex attribute, integer rank of the manager in the
+##'       company, ranging from 1 to 3}
+##'   \item{Tenure}{vertex attribute, number of years of tenure at the
+##'       company}
+##' }
+##' @docType data
+##' @keywords datasets
+##' @name Krackhardt
+##' @usage data(Krackhardt)
+##' @references Krackhardt, D. (1987), "Cognitive social structures",
+##'     Social Networks 9(2), 109--134.
+##' @source \url{http://networkdata.ics.uci.edu/netdata/html/krackHighTech.html}
+NULL
