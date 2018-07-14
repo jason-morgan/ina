@@ -76,3 +76,24 @@ NULL
 ##'     Social Networks 9(2), 109--134.
 ##' @source \url{http://networkdata.ics.uci.edu/netdata/html/krackHighTech.html}
 NULL
+
+##' Cosponsorship network among the 5 most liberal and 5 most conservative
+##'
+##' In this directed network an edge from i to j indicates that senator i cosponsored
+##' at least two bills sponsored by j in the 106th Congress.
+##'
+##' @format A directed statnet network object with 10 nodes:
+##' \describe{
+##'   \item{vertex.names}{vertex attribute, name of each senator
+##'       in the network}
+##'   \item{ideol}{vertex attribute, DW-nominate ideology score of each senator}
+##'   \item{dist}{network attribute, Euclidean distance in lat/lon units, between state capitals}
+##' }
+##' @docType data
+##' @keywords datasets
+##' @name senate_network
+##' @usage data(senate_network)
+##' @references Fowler, J. H. (2006). Connecting the Congress: A study of
+##'     cosponsorship networks. Political Analysis, 14(4), 456-487.
+##' @source \url{http://jhfowler.ucsd.edu/cosponsorship.htm}
+NULL
