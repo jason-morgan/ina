@@ -93,8 +93,8 @@ NULL
 ##' }
 ##' @docType data
 ##' @keywords datasets
-##' @name senate_network
-##' @usage data(senate_network)
+##' @name Sentate
+##' @usage data(Senate)
 ##' @references Fowler, J. H. (2006). Connecting the Congress: A study of
 ##'     cosponsorship networks. Political Analysis, 14(4), 456-487.
 ##' @source \url{http://jhfowler.ucsd.edu/cosponsorship.htm}
