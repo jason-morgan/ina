@@ -99,3 +99,27 @@ NULL
 ##'     cosponsorship networks. Political Analysis, 14(4), 456-487.
 ##' @source \url{http://jhfowler.ucsd.edu/cosponsorship.htm}
 NULL
+
+
+##' Grey's Anatomy hookup network
+##'
+##' This undirected network consists of 44 vertices representing
+##'
+##' @format A undirected statnet network object with 44 nodes:
+##' \describe{
+##'   \item{birthyear}{}
+##'   \item{name}{}
+##'   \item{position}{}
+##'   \item{race}{}
+##'   \item{season}{}
+##'   \item{sex}{}
+##'   \item{sign}{}
+##'   \item{vertex.names}{}
+##' }
+##' @docType data
+##' @keywords datasets
+##' @name Hookups
+##' @usage data(Hookups)
+##' @references Gathered by Gary Weissman and Augmented by Benjamin Lind
+##' @source \url{}
+NULL
