@@ -123,3 +123,22 @@ NULL
 ##' @references Gathered by Gary Weissman and Augmented by Benjamin Lind
 ##' @source \url{}
 NULL
+
+##' NCAA Men's Basketball data
+##'
+##' This directed network of 15 nodes represents scoring between
+##' teams in the Atlantic Coast Conference in the 2016 Regular season.
+##'
+##' @format Two matrices and a data frame:
+##' \describe{
+##'   \item{adjacencyMatrix}{Matrix in which the (i,j) element is the number of points, in thousands, that team i scored on team j over the regular season.}
+##'   \item{covariateData}{Data frame that includes that name of the school and its enrollment.}
+##'   \item{nGames}{Matrix in which the (i,j) element is the number of games played between teams i and j.}
+##' }
+##' @docType data
+##' @keywords datasets
+##' @name ACCBasketball
+##' @usage data(ACCBasketball)
+##' @references Gathered from spreadsheetsports.com.
+##' @source \url{spreadsheetsports.com}
+NULL
