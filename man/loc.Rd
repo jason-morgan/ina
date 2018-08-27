@@ -10,7 +10,7 @@ loc(object, ...)
 \method{loc}{ergmm}(object, ...)
 }
 \arguments{
-\item{object}{Model object returned by \link{\code{ergmm}}.}
+\item{object}{Model object returned by \code{\link[latentnet]{ergmm}}.}
 
 \item{...}{Additional arguments, unused.}
 }
@@ -20,11 +20,11 @@ Matrix of posterior means of the vertices as estimated in the latent
 }
 \description{
 Extracts the estimated posterior means for the vertices as estimated in the
-\link{\code{latentnet}} package.
+\code{\link{latentnet}} package.
 }
 \details{
 \code{loc} returns a matrix of posterior means for the latent locations of
-each vertex as estimated by \link{\code{ergmm}}.
+each vertex as estimated by \code{\link[latentnet]{ergmm}}.
 }
 \author{
 Jason W. Morgan \email{jason.w.morgan@gmail.com}

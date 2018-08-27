@@ -1,7 +1,7 @@
 Package: ina
 Title: Data Collection for the book Inferential Network Analysis
-Version: 0.0.6
-Date: 2018-08-25
+Version: 0.0.7
+Date: 2018-08-26
 Authors@R: as.person(c(
     "Jason W. Morgan <jason.w.morgan@gmail.com> [aut, cre]",
     "Skyler J. Cranmer <cranmer.12@osu.edu> [aut]",
@@ -14,7 +14,8 @@ Depends:
     R (>= 3.0.1),
     RColorBrewer (>= 1.1-2)
 Imports:
-    latentnet (>= 2.8.0)
+    latentnet (>= 2.8.0),
+    ROCR (>= 1.0-7)
 License: GPL-3
 Encoding: UTF-8
 LazyData: true
