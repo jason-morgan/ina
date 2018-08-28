@@ -116,10 +116,16 @@ model_performance <- function(object, measure, x.measure="cutoff",
 model_performance.ergmm <- function(object, measure, x.measure="cutoff",
                                     ...)
 {
-    ## WARNING! Needs to be fixed for directed networks
-    lowtri <- function(x) { x[lower.tri(x)] }
+    extractor <- function(x, directed=FALSE) {
+        if (isTRUE(directed)) {
+            c(x[lower.tri(x)], x[upper.tri(x)])
+        } else {
+            x[lower.tri(x)]
+        }
+    }
 
-    y <- lowtri(as.matrix(summary(object)$model$Yg))
-    pred <- ROCR::prediction(lowtri(predict(object)), y)
+    G <- summary(object)$model$Yg
+    y <- extractor(as.matrix(G), is.directed(G))
+    pred <- ROCR::prediction(extractor(predict(object), is.directed(G)), y)
     ROCR::performance(pred, measure, x.measure)
 }
