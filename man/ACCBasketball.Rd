@@ -6,10 +6,12 @@
 \title{NCAA Men's Basketball data}
 \format{Two matrices and a data frame:
 \describe{
-  \item{adjacencyMatrix}{Matrix in which the (i,j) element is the number of points, in thousands, that team i scored on team j over the regular season.}
-  \item{covariateData}{Data frame that includes that name of the school and its enrollment.}
-  \item{nGames}{Matrix in which the (i,j) element is the number of games played between teams i and j.}
-}}
+\item{adjacencyMatrix}{Matrix in which the (i,j) element is the number of
+    points, in thousands, that team i scored on team j over the regular season.}
+\item{covariateData}{Data frame that includes that name of the school and
+    its enrollment.}
+\item{nGames}{Matrix in which the (i,j) element is the number of games
+    played between teams i and j.} }}
 \source{
 \url{spreadsheetsports.com}
 }

@@ -152,7 +152,7 @@ NULL
 ##'
 ##' Newman's note on the data:
 ##'
-##' ``Books about US politics
+##' ``Books about US politics \newline
 ##' Compiled by Valdis Krebs
 ##'
 ##' Nodes represent books about US politics sold by the online bookseller
