@@ -131,14 +131,55 @@ NULL
 ##'
 ##' @format Two matrices and a data frame:
 ##' \describe{
-##'   \item{adjacencyMatrix}{Matrix in which the (i,j) element is the number of points, in thousands, that team i scored on team j over the regular season.}
-##'   \item{covariateData}{Data frame that includes that name of the school and its enrollment.}
-##'   \item{nGames}{Matrix in which the (i,j) element is the number of games played between teams i and j.}
-##' }
+##' \item{adjacencyMatrix}{Matrix in which the (i,j) element is the number of
+##'     points, in thousands, that team i scored on team j over the regular season.}
+##' \item{covariateData}{Data frame that includes that name of the school and
+##'     its enrollment.}
+##' \item{nGames}{Matrix in which the (i,j) element is the number of games
+##'     played between teams i and j.} }
 ##' @docType data
 ##' @keywords datasets
 ##' @name ACCBasketball
 ##' @usage data(ACCBasketball)
 ##' @references Gathered from spreadsheetsports.com.
 ##' @source \url{spreadsheetsports.com}
+NULL
+
+##' Books about US Politics
+##'
+##' This network consistens of 105 vertices, each representing a book about
+##' politics sold in the early 2000s in Amazon.
+##'
+##' Newman's note on the data:
+##'
+##' ``Books about US politics
+##' Compiled by Valdis Krebs
+##'
+##' Nodes represent books about US politics sold by the online bookseller
+##' Amazon.com.  Edges represent frequent co-purchasing of books by the same
+##' buyers, as indicated by the "customers who bought this book also bought
+##' these other books" feature on Amazon.
+##'
+##' Nodes have been given values "l", "n", or "c" to indicate whether they are
+##' "liberal", "neutral", or "conservative".  These alignments were assigned
+##' separately by Mark Newman based on a reading of the descriptions and
+##' reviews of the books posted on Amazon.
+##'
+##' These data should be cited as V. Krebs, unpublished,
+##' \url{http://www.orgnet.com/}.''
+##'
+##' @format An undirected statnet network onject with 105 nodes
+##' \describe{
+##' \item{title}{Title of the book.}
+##' \item{political_leaning}{The political leaning of the book, as compiled
+##'     by Mark Newman from descriptions on Amazon. These have been recoded
+##'     to "liberal", "neutral", and "conservative".}
+##' }
+##' @docType data
+##' @keywords datasets
+##' @name Books
+##' @usage data(Books)
+##' @references \url{http://www-personal.umich.edu/~mejn/netdata/};
+##'     Valdis Krebs, Unpublished.
+##' @source \url{http://vlado.fmf.uni-lj.si/pub/networks/data/mix/mixed.htm}
 NULL
