@@ -46,6 +46,7 @@ loc.ergmm <- function(object, ...)
     nm <- network.vertex.names(smry$model$Yg)
     z <- smry$pmean$Z
     rownames(z) <- nm
+    colnames(z) <- paste0("Z", 1:ncol(z))
     z
 }
 
@@ -94,7 +95,8 @@ mcmc_distance.ergmm <- function(object, i, j)
 ##' \code{\link[latentnet]{ergmm}}.
 ##'
 ##' Returns a performance object for a model estimates with
-##' \code{\link[latentnet]{ergmm}}.
+##' \code{\link[latentnet]{ergmm}}. Predictions from the supplied model are
+##' based on the posterior mean of the parameter estimates.
 ##' @title Return the Model Performance of an Latent Space Model
 ##' @param object \code{\link[latentnet]{ergmm}} model object
 ##' @param measure Performance measure to use for the evaluation. See
@@ -126,6 +128,7 @@ model_performance.ergmm <- function(object, measure, x.measure="cutoff",
 
     G <- summary(object)$model$Yg
     y <- extractor(as.matrix(G), is.directed(G))
-    pred <- ROCR::prediction(extractor(predict(object), is.directed(G)), y)
+    pred <- ROCR::prediction(extractor(predict(object, type="pmean"),
+                                       is.directed(G)), y)
     ROCR::performance(pred, measure, x.measure)
 }

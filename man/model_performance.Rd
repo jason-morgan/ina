@@ -29,7 +29,8 @@ Returns a performance object for a model estimates with
 }
 \details{
 Returns a performance object for a model estimates with
-\code{\link[latentnet]{ergmm}}.
+\code{\link[latentnet]{ergmm}}. Predictions from the supplied model are
+based on the posterior mean of the parameter estimates.
 }
 \author{
 Jason W. Morgan \email{jason.w.morgan@gmail.com}

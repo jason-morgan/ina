@@ -1,7 +1,7 @@
 Package: ina
 Title: Data Collection for the book Inferential Network Analysis
-Version: 0.0.8
-Date: 2018-08-29
+Version: 0.0.10
+Date: 2018-09-01
 Authors@R: as.person(c(
     "Jason W. Morgan <jason.w.morgan@gmail.com> [aut, cre]",
     "Skyler J. Cranmer <cranmer.12@osu.edu> [aut]",
