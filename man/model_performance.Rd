@@ -7,7 +7,8 @@
 \usage{
 model_performance(object, measure, x.measure = "cutoff", ...)
 
-\method{model_performance}{ergmm}(object, measure, x.measure = "cutoff", ...)
+\method{model_performance}{ergmm}(object, measure, x.measure = "cutoff",
+  ...)
 }
 \arguments{
 \item{object}{\code{\link[latentnet]{ergmm}} model object}

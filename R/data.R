@@ -101,6 +101,24 @@ NULL
 NULL
 
 
+
+##' Full cosponsorship network of the 108th senate
+##'
+##' This undirected network consists of 101 vertices
+##'
+##' @format A list object containing a weighted adjacency matrix (net), and a character vector of senator names (labels). Also a data frame containing the ideology scores of senators.
+##' \describe{
+##'   \item{senlist}{List object with weighted adjacency matrix.}
+##'   \item{dwnom}{Data frame with ideology scores of senators.}
+##' }
+##' @docType data
+##' @keywords datasets
+##' @name cosponsorship
+##' @usage data(cosponsorship)
+##' @references Gathered by James Fowler.
+##' @source \url{}
+NULL
+
 ##' Grey's Anatomy hookup network
 ##'
 ##' This undirected network consists of 44 vertices representing

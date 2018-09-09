@@ -20,4 +20,4 @@ License: GPL-3
 Encoding: UTF-8
 LazyData: true
 Maintainer: 'Jason W. Morgan' <jason.w.morgan@gmail.com>
-RoxygenNote: 6.0.1
+RoxygenNote: 6.1.0
