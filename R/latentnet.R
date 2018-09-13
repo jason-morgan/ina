@@ -103,12 +103,14 @@ mcmc_distance.ergmm <- function(object, i, j)
 ##'     \code{\link[ROCR]{performance}}.
 ##' @param x.measure A second performance measure. See
 ##'     \code{\link[ROCR]{performance}}.
+##' @param type Prediction type to pass to \code{\link{predict.ergmm}}. Unlike
+##'     in that function, "pmean" is the default.
 ##' @param ... Additional arguments, not used
 ##' @return A \code{\link[ROCR]{performance}} object.
 ##' @author Jason W. Morgan \email{jason.w.morgan@@gmail.com}
 ##' @export
 model_performance <- function(object, measure, x.measure="cutoff",
-                              ...)
+                              type="pmean", ...)
 {
     UseMethod("model_performance")
 }
@@ -116,7 +118,7 @@ model_performance <- function(object, measure, x.measure="cutoff",
 ##' @rdname model_performance
 ##' @export
 model_performance.ergmm <- function(object, measure, x.measure="cutoff",
-                                    ...)
+                                    type="pmean", ...)
 {
     extractor <- function(x, directed=FALSE) {
         if (isTRUE(directed)) {
@@ -128,7 +130,7 @@ model_performance.ergmm <- function(object, measure, x.measure="cutoff",
 
     G <- summary(object)$model$Yg
     y <- extractor(as.matrix(G), is.directed(G))
-    pred <- ROCR::prediction(extractor(predict(object, type="pmean"),
+    pred <- ROCR::prediction(extractor(predict(object, type=type),
                                        is.directed(G)), y)
     ROCR::performance(pred, measure, x.measure)
 }

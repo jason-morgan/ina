@@ -5,10 +5,11 @@
 \alias{model_performance.ergmm}
 \title{Return the Model Performance of an Latent Space Model}
 \usage{
-model_performance(object, measure, x.measure = "cutoff", ...)
+model_performance(object, measure, x.measure = "cutoff", type = "pmean",
+  ...)
 
 \method{model_performance}{ergmm}(object, measure, x.measure = "cutoff",
-  ...)
+  type = "pmean", ...)
 }
 \arguments{
 \item{object}{\code{\link[latentnet]{ergmm}} model object}
@@ -18,6 +19,9 @@ model_performance(object, measure, x.measure = "cutoff", ...)
 
 \item{x.measure}{A second performance measure. See
 \code{\link[ROCR]{performance}}.}
+
+\item{type}{Prediction type to pass to \code{\link{predict.ergmm}}. Unlike
+in that function, "pmean" is the default.}
 
 \item{...}{Additional arguments, not used}
 }
