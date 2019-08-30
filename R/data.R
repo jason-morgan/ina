@@ -163,6 +163,41 @@ NULL
 ##' @source \url{spreadsheetsports.com}
 NULL
 
+
+##' U.S. Estuary Networks
+##'
+##' This is a directed network with 194 total nodes, spread over separate networks
+##' that cover ten U.S. estuaries.
+##'
+##' @format Five matrices:
+##' \describe{
+##' \item{nets1}{Matrix in which the (i,j) element is an indicator of the 
+##' relationship category from i to j in the first wave. Category values
+##' include '10' for "structural zero", which is included if i and j are
+##' in different networks, '0' for not tied, '1' for tied, and 'NA' for
+##' missing (i.e., i did not fill out the respective cell in the survey).}
+##' \item{nets2}{Matrix in which the (i,j) element is an indicator of the 
+##' relationship category from i to j in the second wave.}
+##' \item{govact}{One-column matrix in which a 0 indicates non-governmental
+##'  organization and 1 indicates governmental organization. }
+##' \item{prodev}{One-column matrix in which higher values indicate 
+##' that the respondent is more supportive of development.}
+##' \item{trust}{Two-column matrix, with one column for each wave, 
+##' in which higher values indicate greater trust for the other organizations
+##' in the network.}}
+##' @docType data
+##' @keywords datasets
+##' @name estuaries
+##' @usage data(estuaries)
+##' @references Berardo, Ramiro, and John T. Scholz. "Self‐organizing policy networks: 
+##' Risk, partner selection, and cooperation in estuaries." American Journal of 
+##' Political Science 54, no. 3 (2010): 632-649.
+##' 
+##' Desmarais, Bruce A., and Skyler J. Cranmer. "Micro‐level interpretation of 
+##' exponential random graph models with application to estuary networks." 
+##' Policy Studies Journal 40, no. 3 (2012): 402-434.
+NULL
+
 ##' Books about US Politics
 ##'
 ##' This network consistens of 105 vertices, each representing a book about
