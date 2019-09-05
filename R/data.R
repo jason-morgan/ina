@@ -198,6 +198,26 @@ NULL
 ##' Policy Studies Journal 40, no. 3 (2012): 402-434.
 NULL
 
+##' Golden Age of Hollywood Actor Networks
+##'
+##' This is a directed network of film actors with 55 nodes, over seven time periods
+##'
+##' @format Seven network objects and one data frame:
+##' \describe{
+##' \item{n1--n7}{Each of these seven objects is is a network object.  
+##' Each node is an actor, and an edge from i to j indicates that
+##' i appeard in at least one film in a supporting role to j during 
+##' the respective time period.}
+##' \item{attributes}{A data frame that includes vertex attributes.}}
+##' @docType data
+##' @keywords datasets
+##' @name gaoh
+##' @usage data(gaoh)
+##' @references Taylor, Dane, Sean A. Myers, Aaron Clauset, Mason A. Porter,
+##'  and Peter J. Mucha. "Eigenvector-based centrality measures for temporal
+##'   networks." Multiscale Modeling & Simulation 15, no. 1 (2017): 537-574.
+NULL
+
 ##' Books about US Politics
 ##'
 ##' This network consistens of 105 vertices, each representing a book about
