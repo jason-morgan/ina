@@ -142,6 +142,27 @@ NULL
 ##' @source \url{}
 NULL
 
+##' Scottish Schoolgirl Friendship Network
+##'
+##' This is a friendship network comprised of 50 girls from a Scottish school. The girls were surveyed
+##' over three years starting when they were about 13 years old in 1995.
+##'
+##' @format Two matrices and a data frame:
+##' \describe{
+##' \item{Girls}{Network object aggregated over the three years. Edge attribute 'mentions' indicates
+##' the number of times, out of three, that node i listed j in the surveys.}
+##' \item{Girls1}{Network object from wave 1.}
+##' \item{Girls2}{Network object from wave 2.}
+##' \item{Girls3}{Network object from wave 3.}
+##' } 
+##' @docType data
+##' @keywords datasets
+##' @name ScottishSchool
+##' @usage data(ScottishSchool)
+##' @references Michell, Lynn, and Amanda Amos. "Girls, pecking order and smoking." Social science & medicine 44, no. 12 (1997): 1861-1869.
+##' @source \url{https://www.stats.ox.ac.uk/~snijders/siena/Glasgow_data.htm}
+NULL
+
 ##' NCAA Men's Basketball data
 ##'
 ##' This directed network of 15 nodes represents scoring between
