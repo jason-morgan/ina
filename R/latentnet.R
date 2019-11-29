@@ -134,3 +134,95 @@ model_performance.ergmm <- function(object, measure, x.measure="cutoff",
                                        is.directed(G)), y)
     ROCR::performance(pred, measure, x.measure)
 }
+
+##' Recover the weighted adjacency matrix for a network.
+##'
+##' Recover the weighted adjacency matrix for a network.
+##' @title Return Weighted Adjacency Matrix
+##' @param network \code{\link[network]{network}} object.
+##' @param covariate string, the covariate to extract
+##' @return Adjacency matrix.
+##' @author Jason W. Morgan \email{jason.w.morgan@@gmail.com}
+##' @export
+to_sociomatrix <- function(network, covariate)
+{
+    e <- as.edgelist(network, covariate)
+    n <- attr(e, "n")
+    y <- matrix(0, ncol=n, nrow=n)
+
+    if (!is.directed(network)) {
+        for (i in 1:nrow(e)) {
+            r <- e[i,]
+            y[r[1], r[2]] <- y[r[2], r[1]] <- r[3]
+        }
+    } else {
+        for (i in 1:nrow(e)) {
+            r <- e[i,]
+            y[r[1], r[2]] <- r[3]
+        }
+    }
+
+    y
+}
+
+##' Simulate edge outcomes from an estimated \code{\link[latentnet]{ergmm}} model.
+##'
+##' Simulate edge outcomes from an estimated \code{\link[latentnet]{ergmm}} model.
+##' @title Simulate Outcomes from Latent Space Model
+##' @param model \code{\link[latentnet]{ergmm}} model object
+##' @param n integer, number of simulations
+##' @param x string, the covariate outcome of interest
+##' @param i integer, sender id
+##' @param j integer, receiver id
+##' @param seed integer, random seed for replicability
+##' @return vector of simulated values
+##' @author Jason W. Morgan \email{jason.w.morgan@@gmail.com}
+##' @export
+simulate_edge <- function(model, n, x, i, j, seed=NULL)
+{
+    ## no loops
+    stopifnot(i != j)
+
+    get_edge <- function(s, x, i, j) {
+        to_sociomatrix(s, x)[i, j]
+    }
+
+    sims <- simulate(model, nsim=n, seed=seed)[[2]]
+    sapply(sims, function(s) { get_edge(s, x, i, j)})
+}
+
+##' Simulates and then plots outcomes between specified nodes.
+##'
+##' Simulates and then plots outcomes between specified nodes from an estimated
+##' latent space model.
+##' @title Simulate and Plot Histogram of Outcomes from Latent Space Model
+##' @param model \code{\link[latentnet]{ergmm}} model object
+##' @param network \code{\link[network]{network}} object from which the model
+##'     was estimated.
+##' @param x string, the covariate outcome of interest
+##' @param i integer, sender id
+##' @param j integer, receiver id
+##' @param n integer, number of simulations
+##' @param barplot boolean, plot a barplot instead of a histogram. Useful for
+##'     discrete outcomes.
+##' @author Jason W. Morgan \email{jason.w.morgan@@gmail.com}
+##' @export
+predict_response_hist <- function(model, network, x, i, j, n=1000, barplot=FALSE)
+{
+    sims <- simulate_edge(model, n, x, i, j)
+    truth <- to_sociomatrix(network, x)[i, j]
+
+    if (isTRUE(barplot)) {
+        barplot(table(sims), col=ina::Colors()[1], border="white",
+                main=paste0("Predicted edge values from ", i, " to ", j),
+                space=0)
+        shift <- 0.5
+    } else {
+        hist(sims, col=ina::Colors()[1], border="white",
+             main=paste0("Predicted edge values from ", i, " to ", j))
+        shift <- 0
+    }
+
+    abline(v=truth + shift, col=ina::Colors(8)[8], lty=2, lwd=2)
+    abline(v=mean(sims) + shift, col=ina::Colors(2)[2], lty=2, lwd=2)
+}
