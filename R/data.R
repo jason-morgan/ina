@@ -50,7 +50,6 @@
 ##' @source \url{https://sites.google.com/site/ucinetsoftware/datasets/informalcommunicationwithinasawmillonstrike}
 NULL
 
-
 ##' Advice network between managers in a high-tech manufacturing compnay
 ##'
 ##' This directed network contains the advice communication network between
@@ -77,7 +76,6 @@ NULL
 ##' @source \url{http://networkdata.ics.uci.edu/netdata/html/krackHighTech.html}
 NULL
 
-
 ##' Cosponsorship network among the 5 most liberal and 5 most conservative
 ##'
 ##' In this directed network an edge from i to j indicates that senator i
@@ -100,13 +98,13 @@ NULL
 ##' @source \url{http://jhfowler.ucsd.edu/cosponsorship.htm}
 NULL
 
-
-
 ##' Full cosponsorship network of the 108th senate
 ##'
 ##' This undirected network consists of 101 vertices
 ##'
-##' @format A list object containing a weighted adjacency matrix (net), and a character vector of senator names (labels). Also a data frame containing the ideology scores of senators.
+##' @format A list object containing a weighted adjacency matrix (net), and
+##' a character vector of senator names (labels). Also a data frame containing
+##' the ideology scores of senators.
 ##' \describe{
 ##'   \item{senlist}{List object with weighted adjacency matrix.}
 ##'   \item{dwnom}{Data frame with ideology scores of senators.}
@@ -144,22 +142,25 @@ NULL
 
 ##' Scottish Schoolgirl Friendship Network
 ##'
-##' This is a friendship network comprised of 50 girls from a Scottish school. The girls were surveyed
-##' over three years starting when they were about 13 years old in 1995.
+##' This is a friendship network comprised of 50 girls from a Scottish school.
+##' The girls were surveyed over three years starting when they were about
+##' 13 years old in 1995.
 ##'
 ##' @format Two matrices and a data frame:
 ##' \describe{
-##' \item{Girls}{Network object aggregated over the three years. Edge attribute 'mentions' indicates
-##' the number of times, out of three, that node i listed j in the surveys.}
+##' \item{Girls}{Network object aggregated over the three years. Edge attribute
+##'     'mentions' indicates the number of times, out of three, that node i
+##'     listed j in the surveys.}
 ##' \item{Girls1}{Network object from wave 1.}
 ##' \item{Girls2}{Network object from wave 2.}
 ##' \item{Girls3}{Network object from wave 3.}
-##' } 
+##' }
 ##' @docType data
 ##' @keywords datasets
 ##' @name ScottishSchool
 ##' @usage data(ScottishSchool)
-##' @references Michell, Lynn, and Amanda Amos. "Girls, pecking order and smoking." Social science & medicine 44, no. 12 (1997): 1861-1869.
+##' @references Michell, Lynn, and Amanda Amos. "Girls, pecking order
+##' and smoking." Social science & medicine 44, no. 12 (1997): 1861-1869.
 ##' @source \url{https://www.stats.ox.ac.uk/~snijders/siena/Glasgow_data.htm}
 NULL
 
@@ -184,7 +185,6 @@ NULL
 ##' @source \url{spreadsheetsports.com}
 NULL
 
-
 ##' U.S. Estuary Networks
 ##'
 ##' This is a directed network with 194 total nodes, spread over separate networks
@@ -192,30 +192,31 @@ NULL
 ##'
 ##' @format Five matrices:
 ##' \describe{
-##' \item{nets1}{Matrix in which the (i,j) element is an indicator of the 
-##' relationship category from i to j in the first wave. Category values
-##' include '10' for "structural zero", which is included if i and j are
-##' in different networks, '0' for not tied, '1' for tied, and 'NA' for
-##' missing (i.e., i did not fill out the respective cell in the survey).}
-##' \item{nets2}{Matrix in which the (i,j) element is an indicator of the 
-##' relationship category from i to j in the second wave.}
+##' \item{nets1}{Matrix in which the (i,j) element is an indicator of the
+##'     relationship category from i to j in the first wave. Category values
+##'     include '10' for "structural zero", which is included if i and j are
+##'     in different networks, '0' for not tied, '1' for tied, and 'NA' for
+##'     missing (i.e., i did not fill out the respective cell in the survey).}
+##' \item{nets2}{Matrix in which the (i,j) element is an indicator of the
+##'     relationship category from i to j in the second wave.}
 ##' \item{govact}{One-column matrix in which a 0 indicates non-governmental
-##'  organization and 1 indicates governmental organization. }
-##' \item{prodev}{One-column matrix in which higher values indicate 
-##' that the respondent is more supportive of development.}
-##' \item{trust}{Two-column matrix, with one column for each wave, 
-##' in which higher values indicate greater trust for the other organizations
-##' in the network.}}
+##'     organization and 1 indicates governmental organization. }
+##' \item{prodev}{One-column matrix in which higher values indicate
+##'     that the respondent is more supportive of development.}
+##' \item{trust}{Two-column matrix, with one column for each wave,
+##'     in which higher values indicate greater trust for the other organizations
+##'     in the network.}}
 ##' @docType data
 ##' @keywords datasets
 ##' @name estuaries
 ##' @usage data(estuaries)
-##' @references Berardo, Ramiro, and John T. Scholz. "Self‐organizing policy networks: 
-##' Risk, partner selection, and cooperation in estuaries." American Journal of 
+##' @references Berardo, Ramiro, and John T. Scholz. "Self-organizing policy
+##' networks:
+##' Risk, partner selection, and cooperation in estuaries." American Journal of
 ##' Political Science 54, no. 3 (2010): 632-649.
-##' 
-##' Desmarais, Bruce A., and Skyler J. Cranmer. "Micro‐level interpretation of 
-##' exponential random graph models with application to estuary networks." 
+##'
+##' Desmarais, Bruce A., and Skyler J. Cranmer. "Micro-level interpretation of
+##' exponential random graph models with application to estuary networks."
 ##' Policy Studies Journal 40, no. 3 (2012): 402-434.
 NULL
 
@@ -225,10 +226,10 @@ NULL
 ##'
 ##' @format Seven network objects and one data frame:
 ##' \describe{
-##' \item{n1--n7}{Each of these seven objects is is a network object.  
-##' Each node is an actor, and an edge from i to j indicates that
-##' i appeard in at least one film in a supporting role to j during 
-##' the respective time period.}
+##' \item{n1--n7}{Each of these seven objects is is a network object.
+##'     Each node is an actor, and an edge from i to j indicates that
+##'     i appeard in at least one film in a supporting role to j during
+##'     the respective time period.}
 ##' \item{attributes}{A data frame that includes vertex attributes.}}
 ##' @docType data
 ##' @keywords datasets
@@ -236,7 +237,7 @@ NULL
 ##' @usage data(gaoh)
 ##' @references Taylor, Dane, Sean A. Myers, Aaron Clauset, Mason A. Porter,
 ##'  and Peter J. Mucha. "Eigenvector-based centrality measures for temporal
-##'   networks." Multiscale Modeling & Simulation 15, no. 1 (2017): 537-574.
+##'  networks." Multiscale Modeling & Simulation 15, no. 1 (2017): 537-574.
 NULL
 
 ##' Books about US Politics
