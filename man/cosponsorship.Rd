@@ -4,7 +4,9 @@
 \name{cosponsorship}
 \alias{cosponsorship}
 \title{Full cosponsorship network of the 108th senate}
-\format{A list object containing a weighted adjacency matrix (net), and a character vector of senator names (labels). Also a data frame containing the ideology scores of senators.
+\format{A list object containing a weighted adjacency matrix (net), and
+a character vector of senator names (labels). Also a data frame containing
+the ideology scores of senators.
 \describe{
   \item{senlist}{List object with weighted adjacency matrix.}
   \item{dwnom}{Data frame with ideology scores of senators.}

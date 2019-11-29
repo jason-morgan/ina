@@ -5,11 +5,9 @@
 \alias{model_performance.ergmm}
 \title{Return the Model Performance of an Latent Space Model}
 \usage{
-model_performance(object, measure, x.measure = "cutoff",
-  type = "pmean", ...)
+model_performance(object, measure, x.measure = "cutoff", type = "pmean", ...)
 
-\method{model_performance}{ergmm}(object, measure, x.measure = "cutoff",
-  type = "pmean", ...)
+\method{model_performance}{ergmm}(object, measure, x.measure = "cutoff", type = "pmean", ...)
 }
 \arguments{
 \item{object}{\code{\link[latentnet]{ergmm}} model object}

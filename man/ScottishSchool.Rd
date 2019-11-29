@@ -6,8 +6,9 @@
 \title{Scottish Schoolgirl Friendship Network}
 \format{Two matrices and a data frame:
 \describe{
-\item{Girls}{Network object aggregated over the three years. Edge attribute 'mentions' indicates
-the number of times, out of three, that node i listed j in the surveys.}
+\item{Girls}{Network object aggregated over the three years. Edge attribute
+    'mentions' indicates the number of times, out of three, that node i
+    listed j in the surveys.}
 \item{Girls1}{Network object from wave 1.}
 \item{Girls2}{Network object from wave 2.}
 \item{Girls3}{Network object from wave 3.}
@@ -19,10 +20,12 @@ the number of times, out of three, that node i listed j in the surveys.}
 data(ScottishSchool)
 }
 \description{
-This is a friendship network comprised of 50 girls from a Scottish school. The girls were surveyed
-over three years starting when they were about 13 years old in 1995.
+This is a friendship network comprised of 50 girls from a Scottish school.
+The girls were surveyed over three years starting when they were about
+13 years old in 1995.
 }
 \references{
-Michell, Lynn, and Amanda Amos. "Girls, pecking order and smoking." Social science & medicine 44, no. 12 (1997): 1861-1869.
+Michell, Lynn, and Amanda Amos. "Girls, pecking order
+and smoking." Social science & medicine 44, no. 12 (1997): 1861-1869.
 }
 \keyword{datasets}
